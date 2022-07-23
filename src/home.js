@@ -70,21 +70,30 @@ function createHome(){
     //Name Container CsS
     containerStyles(nameContainer);
     nameContainer.style.minWidth = '80%';
+    fontSizeH1(restaurantName)
 
     //About CSS
     containerStyles(aboutContainer);
-    ul.style.listStyle = 'none'
-    ul.style.margin = '0'
-    ul.style.padding = '0'
-    contentWidth(aboutContainer)
+    contentWidth(aboutContainer);
+    fontSizeContainerText(aboutContainer)
+    aboutContainer.style.textAlign = 'center'
 
     // Hours Container
     containerStyles(hoursContainer);
     contentWidth(homeContainer);
+    fontSizeContainerText(ul);
+    fontSizeH3(hoursHeader);
+    ul.style.listStyle = 'none';
+    ul.style.margin = '0';
+    ul.style.padding = '0';
 
     // Location Container
     containerStyles(locationContainer)
-
+    fontSizeContainerText(locationContainer)
+    fontSizeH3(locationHeader)
+    const paraLocation = locationContainer.childNodes[1];
+    paraLocation.style.padding = '0'
+    paraLocation.style.margin = '0'
 
     return homeContainer;
 };
@@ -94,20 +103,35 @@ function createHome(){
 
 function containerStyles(container){
     container.style.backgroundColor = 'lightyellow';
-    container.style.border = '5px solid black';
+    container.style.border = '5px solid #DC143C';
     container.style.borderRadius = '1rem';
     container.style.padding = '1rem';
+    container.style.margin = '.5rem';
     return;
 }
 
 function headerWidth(container){
     container.style.minWidth = '80%';
 }
+function fontSizeH1(tag){
+    tag.style.fontSize = '2.67rem';
+    tag.style.margin = '0'
+    tag.style.padding = '0'
+}
 
 function contentWidth(container){
     container.style.width = '50%';
 }
 
+function fontSizeH3(tag){
+    tag.style.fontSize = '1.75rem';
+    tag.style.padding = '0';
+    tag.style.margin = '0';
+}
+
+function fontSizeContainerText(tag){
+    tag.style.fontSize = '1.5rem';
+}
 //loadHome Function
 
 function loadHome(){

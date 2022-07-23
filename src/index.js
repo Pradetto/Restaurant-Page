@@ -1,5 +1,6 @@
 import loadHome from "./home.js";
-
+import italianBackground from './assets/italianCafe.jpg';
+import blackBackground from './assets/black2.jpg'
 
 //Containers
 const body = document.querySelector('body');
@@ -8,7 +9,6 @@ const contentContainer = document.createElement('div');
 const footerContainer = document.createElement('div');
 
 //Header
-
 const navbarContainer = document.createElement('div')
 const button1 = document.createElement('button')
 const button2 = document.createElement('button')
@@ -44,23 +44,18 @@ body.append(footerContainer)
 //Body CSS
 
 body.style.display = 'grid'
-
 body.style.gridTemplateRows = '.5fr 6fr .5fr'
-// body.style.flexDirection = 'column'
-// body.style.alignItems = 'center'
 body.style.minHeight = '100vh'
 body.style.minWidth = '100vw'
-
 body.style.margin = '1rem'
+body.style.background = `url(${blackBackground})`
 
-body.style.background = '#EEEEEE'
 
 // Header Container CSS
 let buttons = document.querySelectorAll('button')
 headerContainer.style.display = 'flex';
 headerContainer.style.alignItems = 'end';
 headerContainer.style.justifyContent = 'center';
-// headerContainer.style.padding = '1rem'
 
 navbarContainer.style.gap = '1rem'
 
@@ -70,6 +65,7 @@ buttons.forEach((b) => {
     b.style.padding = '1rem'
     b.style.marginRight = '1rem'
     b.style.borderRadius = '10px'
+    b.style.zIndex = '-1'
 
     b.addEventListener('click', () =>{
         contentContainer.innerHTML = ''
@@ -83,7 +79,6 @@ buttons.forEach((b) => {
         contentContainerCss();
     });
 });
-// buttons.style.background = 'yellow'
 
 
 
@@ -99,11 +94,12 @@ function contentContainerCss(){
     mainContent.style.alignItems = 'center';
     mainContent.style.justifyContent = 'space-around';
     mainContent.style.flexDirection = 'column';
-    mainContent.style.border = '5px solid black';
+    // mainContent.style.border = '5px solid black';
     mainContent.style.padding = '2rem'
     // mainContent.style.background = 'coral'
-    mainContent.style.backgroundImage = "url('/assets/italianCafe.jpeg')";
+    mainContent.style.backgroundImage = `url(${italianBackground})`;
     mainContent.style.width = '60%'
+    mainContent.style.transform = 'translateY(-10px)'
 };
 
 
@@ -112,6 +108,7 @@ footerContainer.style.display = 'flex';
 footerContainer.style.alignItems = 'center';
 footerContainer.style.justifyContent = 'center';
 footerContainer.style.fontWeight = 'bold'
+footerContainer.style.color = '#89cff0'
 
 // First Intialized when loading
 contentContainerCss();
