@@ -1,4 +1,5 @@
 import loadHome from "./home.js";
+import loadMenu from "./menu.js";
 import italianBackground from './assets/italianCafe.jpg';
 import blackBackground from './assets/black2.jpg'
 
@@ -72,7 +73,7 @@ buttons.forEach((b) => {
         if (b.textContent === 'Home'){
             contentContainer.append(loadHome())
         } else if (b.textContent === 'Menu'){
-            contentContainer.append('<b>Still Need to build</b>')
+            contentContainer.append(loadMenu())
         } else {
             contentContainer.append('<b>Still Need to build</b>')
         };
