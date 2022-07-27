@@ -137,6 +137,6 @@ function fontSizeContainerText(tag){
 function loadHome(){
     return createHome();
     
-}
+};
 
 export default loadHome;
