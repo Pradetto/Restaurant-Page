@@ -1,5 +1,6 @@
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
+import loadContact from "./contact.js";
 import italianBackground from './assets/italianCafe.jpg';
 import blackBackground from './assets/black2.jpg'
 
@@ -75,7 +76,7 @@ buttons.forEach((b) => {
         } else if (b.textContent === 'Menu'){
             contentContainer.append(loadMenu())
         } else {
-            contentContainer.append('<b>Still Need to build</b>')
+            contentContainer.append(loadContact())
         };
         contentContainerCss();
     });
