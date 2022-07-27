@@ -19,6 +19,7 @@ function createMenu (){
     image.style.height = '3.5rem'
     image.style.width = '3.5rem'
 
+    nameContainer.classList.add('titleContainer')
     nameContainer.appendChild(menuName)
     nameContainer.appendChild(image)
 
@@ -28,8 +29,8 @@ function createMenu (){
     const beverageHeader = document.createElement('h2');
     // const beverageImage = document.createElement('img');
 
-    beverageContainer.classList.add('beverageContainer')
-    beverageHeader.classList.add('beverageHeader')
+    beverageContainer.classList.add('itemContainer')
+    beverageHeader.classList.add('itemHeader')
     // beverageImage.classList.add('beverageImage')
 
     beverageHeader.textContent = 'Beverages';
@@ -40,9 +41,9 @@ function createMenu (){
     const beverageTwo = document.createElement('div');
     const beverageThree = document.createElement('div');
 
-    beverageOne.classList.add('beverages')
-    beverageTwo.classList.add('beverages')
-    beverageThree.classList.add('beverages')
+    beverageOne.classList.add('items')
+    beverageTwo.classList.add('items')
+    beverageThree.classList.add('items')
 
     beverageOne.appendChild(createHeader3('Red Wine'));
     beverageTwo.appendChild(createHeader3('White Wine'));
@@ -67,11 +68,11 @@ function createMenu (){
     const foodHeader = document.createElement('h2');
     // const foodImage = document.createElement('img');
 
-    foodContainer.classList.add('beverageContainer')
-    foodHeader.classList.add('beverageHeader')
+    foodContainer.classList.add('itemContainer')
+    foodHeader.classList.add('itemHeader')
     // foodImage.classList.add('beverageImage')
 
-    foodHeader.textContent = 'Beverages';
+    foodHeader.textContent = 'Food';
     // foodImage.src = mario;
     // foodImage.alt = 'mario';
 
@@ -79,9 +80,9 @@ function createMenu (){
     const foodTwo = document.createElement('div');
     const foodThree = document.createElement('div');
 
-    foodOne.classList.add('foods')
-    foodTwo.classList.add('foods')
-    foodThree.classList.add('foods')
+    foodOne.classList.add('items')
+    foodTwo.classList.add('items')
+    foodThree.classList.add('items')
 
     foodOne.appendChild(createHeader3('Pizza'));
     foodTwo.appendChild(createHeader3('Pasta'));

@@ -13,11 +13,12 @@ function createHome(){
 
     nameContainer.appendChild(restaurantName)
     nameContainer.appendChild(image)
+    nameContainer.classList.add('titleContainer')
 
     // CSS Name Container
-    nameContainer.style.display = 'inline-flex'
-    nameContainer.style.justifyContent = 'center'
-    nameContainer.style.alignItems = 'center'
+    // nameContainer.style.display = 'inline-flex'
+    // nameContainer.style.justifyContent = 'center'
+    // nameContainer.style.alignItems = 'center'
 
 
     image.style.height = '3.5rem'
@@ -26,13 +27,17 @@ function createHome(){
 
     // About Container
     const aboutContainer = document.createElement('div');
+    const aboutHeader = document.createElement('h2')
+
+    aboutHeader.textContent = 'About'
+    aboutContainer.appendChild(aboutHeader)
     aboutContainer.appendChild(createParagraph('Detto\'s Italian Market was established in 1996. Not only is it a Deli that provides premium meat but offers a market for Italian goods. Feel free to stop in and try our diner as well which offers only the best Pizza and Pasta!'));
     aboutContainer.appendChild(createParagraph('Grazie, Pradetto'));
 
 
     // Hours Container
     const hoursContainer = document.createElement('div');
-    const hoursHeader = document.createElement('h3');
+    const hoursHeader = document.createElement('h2');
     const ul = document.createElement('ul');
 
     hoursHeader.textContent = 'Hours'
@@ -50,7 +55,7 @@ function createHome(){
 
     // Div for Location
     const locationContainer = document.createElement('div');
-    const locationHeader = document.createElement('h3');
+    const locationHeader = document.createElement('h2');
 
     locationHeader.textContent = 'Location';
     locationContainer.appendChild(locationHeader)
@@ -68,29 +73,31 @@ function createHome(){
     // Home Container CSS
 
     //Name Container CsS
-    containerStyles(nameContainer);
-    nameContainer.style.minWidth = '80%';
-    fontSizeH1(restaurantName)
+    // containerStyles(nameContainer);
+    // nameContainer.style.minWidth = '80%';
+    // fontSizeH1(restaurantName)
 
     //About CSS
-    containerStyles(aboutContainer);
+    // containerStyles(aboutContainer);
     contentWidth(aboutContainer);
-    fontSizeContainerText(aboutContainer)
+    // fontSizeContainerText(aboutContainer)
     aboutContainer.style.textAlign = 'center'
+    aboutContainer.childNodes[1].style.padding = '0'
+    aboutContainer.childNodes[1].style.margin = '0'
 
     // Hours Container
-    containerStyles(hoursContainer);
+    // containerStyles(hoursContainer);
     contentWidth(homeContainer);
-    fontSizeContainerText(ul);
-    fontSizeH3(hoursHeader);
+    // fontSizeContainerText(ul);
+    // fontSizeH3(hoursHeader);
     ul.style.listStyle = 'none';
     ul.style.margin = '0';
     ul.style.padding = '0';
 
     // Location Container
-    containerStyles(locationContainer)
-    fontSizeContainerText(locationContainer)
-    fontSizeH3(locationHeader)
+    // containerStyles(locationContainer)
+    // fontSizeContainerText(locationContainer)
+    // fontSizeH3(locationHeader)
     const paraLocation = locationContainer.childNodes[1];
     paraLocation.style.padding = '0'
     paraLocation.style.margin = '0'
@@ -101,14 +108,14 @@ function createHome(){
 
 //Container CSS styles
 
-function containerStyles(container){
-    container.style.backgroundColor = 'lightyellow';
-    container.style.border = '5px solid #DC143C';
-    container.style.borderRadius = '1rem';
-    container.style.padding = '1rem';
-    container.style.margin = '.5rem';
-    return;
-}
+// function containerStyles(container){
+//     container.style.backgroundColor = 'lightyellow';
+//     container.style.border = '5px solid #DC143C';
+//     container.style.borderRadius = '1rem';
+//     container.style.padding = '1rem';
+//     container.style.margin = '.5rem';
+//     return;
+// }
 
 function headerWidth(container){
     container.style.minWidth = '80%';

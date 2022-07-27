@@ -3,6 +3,7 @@ import loadMenu from "./menu.js";
 import loadContact from "./contact.js";
 import italianBackground from './assets/italianCafe.jpg';
 import blackBackground from './assets/black2.jpg'
+import './styles.css'
 
 //Containers
 const body = document.querySelector('body');
@@ -88,9 +89,11 @@ buttons.forEach((b) => {
 function contentContainerCss(){
     contentContainer.style.display = 'flex';
     contentContainer.style.justifyContent = 'center';
-
-
+    contentContainer.classList.add('contentContainer')
+    
+    
     const mainContent = contentContainer.childNodes[0];
+    mainContent.classList.add('mainContent')
 
     mainContent.style.display = 'flex';
     mainContent.style.alignItems = 'center';

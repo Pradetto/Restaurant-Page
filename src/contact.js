@@ -14,6 +14,7 @@ function createContact(){
     image.style.height = '3.5rem'
     image.style.width = '3.5rem'
 
+    nameContainer.classList.add('titleContainer')
     nameContainer.appendChild(contactName)
     nameContainer.appendChild(image)
 
@@ -21,25 +22,33 @@ function createContact(){
     const contacts = document.createElement('div')
     contacts.classList.add('contacts')
     const contactOne = document.createElement('div')
+    const contactOneDetails = document.createElement('div')
     const contactTwo = document.createElement('div')
+    const contactTwoDetails = document.createElement('div')
     const contactThree = document.createElement('div')
+    const contactThreeDetails = document.createElement('div')
 
-    contactOne.appendChild(createHeader3('Pradetto'))
-    contactOne.appendChild(createParagraph('Owner'))
-    contactOne.appendChild(createParagraph('123-456-1921'))
+    // contactOneDetails.appendChild(contactOne)
+    contactOneDetails.appendChild(createHeader3('Pradetto'))
+    contactOneDetails.appendChild(createParagraph('Owner'))
+    contactOneDetails.appendChild(createParagraph('123-456-1921'))
+    contactOne.appendChild(contactOneDetails)
     contactOne.appendChild(createImage(luigi,'Owner'))
     contactOne.classList.add('contact')
+    contactOneDetails.classList.add('details')
 
 
-    contactTwo.appendChild(createHeader3('Pradetto'))
-    contactTwo.appendChild(createParagraph('Owner'))
-    contactTwo.appendChild(createParagraph('123-456-1921'))
+    contactTwoDetails.appendChild(createHeader3('Pradetto'))
+    contactTwoDetails.appendChild(createParagraph('Owner'))
+    contactTwoDetails.appendChild(createParagraph('123-456-1921'))
+    contactTwo.appendChild(contactTwoDetails)
     contactTwo.appendChild(createImage(luigi,'Owner'))
     contactTwo.classList.add('contact')
 
-    contactThree.appendChild(createHeader3('Pradetto'))
-    contactThree.appendChild(createParagraph('Owner'))
-    contactThree.appendChild(createParagraph('123-456-1921'))
+    contactThreeDetails.appendChild(createHeader3('Pradetto'))
+    contactThreeDetails.appendChild(createParagraph('Owner'))
+    contactThreeDetails.appendChild(createParagraph('123-456-1921'))
+    contactThree.appendChild(contactThreeDetails)
     contactThree.appendChild(createImage(luigi,'Owner'))
     contactThree.classList.add('contact')
 

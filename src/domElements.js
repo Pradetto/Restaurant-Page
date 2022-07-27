@@ -20,7 +20,7 @@ function createImage(src,alt = 'NA'){
     const img = document.createElement('img')
     img.src = src
     img.alt = alt
-    img.style.height = '8rem'
+    // img.style.height = '8rem'
     return img;
 };
 
